@@ -1,17 +1,19 @@
-import java.util.Arrays;
+import data.Array;
+import logic.ArraySorting;
+import logic.ElementSearching;
+import view.WritingInFile;
+
+import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        WritingInFile writingInFile = new WritingInFile();
         ElementSearching elementSearching = new ElementSearching();
         ArraySorting sorting = new ArraySorting();
-        Array array = new Array(5);
-        int[] trueArray = array.getArrayData();
-        System.out.print(Arrays.toString(trueArray) + "\n");
-        System.out.print("Min is " + elementSearching.searchMaxOfArray(array) + "\n");
-        System.out.print("Max is " + elementSearching.searchMinOfArray(array) + "\n");
-        sorting.sortArray(trueArray);
-        System.out.print(Arrays.toString(trueArray));
+        Array arrayObject = new Array(5);
+        int[] array = arrayObject.getArrayData();
 
+        writingInFile.writeToTxt(array,"file.txt");
 
     }
 }

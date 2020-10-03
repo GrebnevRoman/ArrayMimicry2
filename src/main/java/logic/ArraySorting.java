@@ -1,3 +1,5 @@
+package logic;
+
 public class ArraySorting {
     public void sortArray(int[] array) {
         for (int left = 0; left < array.length; left++) {

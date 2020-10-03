@@ -1,3 +1,7 @@
+package logic;
+
+import data.Array;
+
 public class ElementSearching {
     public int searchMinOfArray(Array objectArray) {
         int [] array = objectArray.getArrayData();

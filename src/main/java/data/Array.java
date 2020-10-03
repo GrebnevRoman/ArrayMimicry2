@@ -1,8 +1,15 @@
+package data;
+
 import java.util.Arrays;
 
 public class Array {
 
     private int[] array;
+
+    public Array() {
+
+    }
+
     public int[] getArrayData() {
         return Arrays.copyOf(array, array.length);
     }
@@ -16,17 +23,13 @@ public class Array {
     }
 
 
-
-
     public void setArray(int[] array) {
         this.array = array;
     }
 
     @Override
     public String toString() {
-        return "Array{" +
-                "array=" + Arrays.toString(array) +
-                '}';
+        return "array=" + Arrays.toString(array);
     }
 
     @Override
